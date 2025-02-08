@@ -1,0 +1,176 @@
+@import url(https://fonts.google.com/specimen/Outfit);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  color: #fff;
+  background-color: hsl(217, 54%, 11%);
+  Font-size: 18px;
+  font-family: 'outfit', sans-serif;
+}
+ 
+/* the global variables */
+:root {
+  --seccolor: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  width:  400px;
+  height: 650px;
+  padding: 25px;
+  background-color: hsl(216, 50%, 16%);
+
+}
+
+#image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px !important;
+  height: 350px !important;
+
+}
+
+.eth {
+  display: flex;
+  width: 350px;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  position: relative;
+} 
+
+
+#coin {
+  margin-top: 20px;
+  font-weight: 600;
+  width: fit-content;
+}
+ 
+#breif {
+  line-height: 30px;
+  margin-top: 10px;
+  color: var(--seccolor);
+  position: relative;
+  top: 10px;
+  
+}
+
+#hz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  margin-top: 20px;
+  
+}
+ 
+ #cost {
+  margin-top: 10px;
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;/* 
+  position: relative;
+  top: 25px; */
+} 
+ 
+ /* - Weights: 300, 400, 600 */
+ 
+#time {
+  position: relative;
+  top: 5px;
+  color: var(--seccolor);
+}
+
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  margin: 1em 0;
+  padding: 0;
+}
+
+
+#pfp {
+  transform: translate(20px,0px);
+  color: var(--seccolor);
+  height: 50px;
+}
+
+#boy {
+  width: 10%;
+  height: auto;
+  vertical-align: middle;
+  border: 1px solid white;
+  border-radius: 100px;
+  transform: translateX(-20px);
+}
+
+span {
+  color: #fff;
+}
+
+#eye {
+  position: absolute;
+  opacity: 1;
+  transform: translateY(310%);
+  z-index: 3;
+  opacity: 0;
+}
+
+.eth#eyeb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* top: ; */
+  opacity: 0;
+  z-index: 2;
+  background-color: var(--cyan);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  width: 349px;
+  height: 349px;
+  overflow: hidden;
+  animation: opacity 0.3 ease ;
+  
+}
+
+/* the active section */
+
+#image:hover #eyeb{
+  opacity: 0.6;
+}
+
+
+#image:hover #eye{
+  opacity: 1;
+}
+
+.eth:hover #breif {
+  opacity: 0;
+}
+
+#coin:hover {
+  color: var(--cyan);
+}
+
+span:hover {
+  color: var(--cyan);
+}
